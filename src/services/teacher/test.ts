@@ -79,29 +79,4 @@ describe('Unit test for teacher service', () => {
 
     expect(isEqual(commonStudents.sort(), commonResult.students.sort())).equal(true)
   })
-
-  // it('should return teacher', (done) => {
-  //   const runTest = async () => {
-  //     const { sequelize, models } = await setupModels()
-
-  //     const teacherService = new TeacherService(sequelize, models)
-
-  //     teacherService.findTeacherByEmail('example1@email.com').then((teacher) => {
-  //       console.log(teacher)
-  //       done()
-  //     }).catch(done)
-  //   }
-
-  //   runTest()
-  // })
-
-  // it('should return hello world 2', () => {
-  //   const result = 'Hello world!'
-  //   expect(result).to.equal('Hello World!')
-  // })
-
-  // it('should return hello world 3', () => {
-  //   const result = 'Hello world!'
-  //   expect(result).to.equal('Hello World!')
-  // })
 })
