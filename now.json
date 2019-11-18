@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "name": "school-node",
+  "alias": "api.school-node.now.sh",
+  "builds": [
+    { "src": "src/**/*.ts", "use": "@now/node" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "src" }
+  ]
+}
