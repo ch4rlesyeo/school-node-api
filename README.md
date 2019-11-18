@@ -19,7 +19,7 @@ yarn
 ```bash
 yarn start
 ```
-##### (Optional ) Using [Zeit Now](https://zeit.co/docs/v2/serverless-functions/introduction/) - Serverless
+##### (Optional) Using [Zeit Now](https://zeit.co/docs/v2/serverless-functions/introduction/) - Serverless
 ```bash
 yarn dev
 ```
