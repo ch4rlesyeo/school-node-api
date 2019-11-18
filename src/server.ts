@@ -25,7 +25,7 @@ export class BaseServer extends Server {
 
   public start(port: number): void {
     const setup = async () => {
-      const { sequelize, models } = await setupModels()
+      const { sequelize, models } = await setupModels(true)
 
       this.setupControllers(sequelize, models)
 
