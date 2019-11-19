@@ -12,9 +12,10 @@
     "outDir": "./build",
     "baseUrl": ".",
     "paths": {
-      "@definitions/*": ["src/definitions/*"],
+      "@utils/*": ["src/utils/*"],
       "@models/*": ["src/models/*"],
       "@services/*": ["src/services/*"],
+      "@definitions/*": ["src/definitions/*"],
       "@controllers/*": ["src/controllers/*"]
     }
   }

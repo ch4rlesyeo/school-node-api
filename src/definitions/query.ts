@@ -1,13 +1,13 @@
-export interface QueryError {
+export interface ErrorMessage {
   message: string
 }
 
 export interface FindCommonStudentQuery {
   students?: string[],
-  error?: QueryError
+  error?: ErrorMessage
 }
 
 export interface RetrieveForNotificationsQuery {
   recipients?: string[],
-  error?: QueryError
+  error?: ErrorMessage
 }
