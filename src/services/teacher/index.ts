@@ -17,10 +17,10 @@ export default class {
   }
 
   async findTeacherByEmail (email: string, createIfNotExist?: boolean): Promise<Teacher> {
-    let teacher: Teacher = await this.models.teacher.findOne({ where: { email: email } })
+    let teacher: Teacher = await this.models.teacher.findOne({ raw: true, where: { email: email } })
 
     if (!teacher && createIfNotExist) {
-      teacher = await this.models.teacher.create({ email: email }).then((result) => result.toJSON())
+      teacher = await this.models.teacher.create({ email: email }, { raw: true })
     }
 
     return teacher
@@ -53,9 +53,13 @@ export default class {
   }
 
   async linkTeacherToStudents(teacherEmail: string, studentEmails: string[]): Promise<boolean> {
-    const teacher = await this.findTeacherByEmail(teacherEmail, true)
+    const findResults = await Promise.all([
+      this.findTeacherByEmail(teacherEmail, true),
+      this.findStudentsByEmail(studentEmails, true)
+    ])
 
-    const students = await this.findStudentsByEmail(studentEmails, true)
+    const teacher = findResults[0]
+    const students = findResults[1]
 
     // check if students are linked to the teacher
     const teacherStudents: TeacherStudent[] = await this.models.teacherStudent.findAll({
