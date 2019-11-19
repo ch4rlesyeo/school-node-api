@@ -2830,11 +2830,6 @@ sequelize-pool@^2.3.0:
   resolved "https://registry.yarnpkg.com/sequelize-pool/-/sequelize-pool-2.3.0.tgz#64f1fe8744228172c474f530604b6133be64993d"
   integrity sha512-Ibz08vnXvkZ8LJTiUOxRcj1Ckdn7qafNZ2t59jYHMX1VIebTAOYefWdRYFt6z6+hy52WGthAHAoLc9hvk3onqA==
 
-sequelize-test-helpers@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/sequelize-test-helpers/-/sequelize-test-helpers-1.2.0.tgz#f740d8eec8d56cb79b560fd6ad0dc408386e30fc"
-  integrity sha512-g8x+RZCpezeg4FWaCOsxcYAp3anHnUpu3rtr5ndaWk0BMp2ekcq/vpVBAnxli+OU3e5Htx/6DIOQp02VbgNnug==
-
 sequelize@^5.21.2:
   version "5.21.2"
   resolved "https://registry.yarnpkg.com/sequelize/-/sequelize-5.21.2.tgz#0daeee9bef37d49490b72a2c6891d53044f65a18"
