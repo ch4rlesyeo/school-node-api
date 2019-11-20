@@ -18,7 +18,7 @@ export const validateGetCommonStudents = (req: GetCommonStudentsRequest, res: Mi
   if (!areValidEmails) {
     return res.status(400).json({
       message: 'Emails badly formatted.'
-    }).status(400)
+    })
   }
 
   return next()
@@ -38,7 +38,7 @@ export const validateRegistration = (req: RegistrationRequest, res: MiddlewareRe
   if (!areValidEmails) {
     return res.status(400).json({
       message: 'Emails badly formatted.'
-    }).status(400)
+    })
   }
 
   return next()
@@ -58,7 +58,7 @@ export const validateSuspend = (req: SuspendRequest, res: MiddlewareResponse, ne
   if (!isValidEmail) {
     return res.status(400).json({
       message: 'Emails badly formatted.'
-    }).status(400)
+    })
   }
 
   return next()
@@ -78,7 +78,7 @@ export const validateRetrieveForNotifications = (req: RetrieveForNotificationReq
   if (!isValidEmail) {
     return res.status(400).json({
       message: 'Emails badly formatted.'
-    }).status(400)
+    })
   }
 
   return next()
